@@ -1,0 +1,19 @@
+- type: entity
+  parent: BaseItem
+  id: DeckOfCards
+  name: Deck of Cards (52)
+  components:
+  - type: Sprite
+    sprite: Objects/Fun/deck_of_cards.rsi
+    state: icon
+  - type: MagazineVisuals
+    magState string?: mag-slug
+    step int: 5
+    zeroVisible bool: false
+  - type: BallisticAmmoProvider
+    mayTransfer: true
+    whitelist:
+      tags:
+      - ShellShotgun
+    capacity: 16
+    count: 16
